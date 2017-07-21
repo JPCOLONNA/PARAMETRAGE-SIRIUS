@@ -1,5 +1,5 @@
 <!--<div id="wrapper">
-    <sidebar> </sidebar>
+    <sidebar></sidebar>
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <router-outlet></router-outlet>
@@ -7,14 +7,14 @@
     </div>
 </div>-->
 <div fxLayout="row" fxLayoutAlign="space-around stretch">
-    <div fxFlex="0 5 250px">
+    <div fxFlex="0 0 220px" fxHide.xs fxHide.sm>
         <sidebar></sidebar>
         <div></div>
     </div>
-    <div fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="space-around stretch">
+    <div fxFlex="1 1 100%" fxLayout="column" fxLayoutAlign="space-around stretch">
         <navbar-cmp></navbar-cmp>
         <router-outlet></router-outlet>
-        <div>&nbsp;</div>
+        <div fxFlex="0 0 10px">&nbsp;</div>
         <footer-cmp></footer-cmp>
     </div>
 </div>

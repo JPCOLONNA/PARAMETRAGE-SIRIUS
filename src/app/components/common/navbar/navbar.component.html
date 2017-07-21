@@ -1,29 +1,29 @@
 ﻿<nav class="navbar navbar-green navbar-absolute">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button md-menu type="button" class="navbar-toggle" data-toggle="collapse" [mdMenuTriggerFor]="appMenu">
+            <button md-menu type="button" class="navbar-toggle" data-toggle="collapse" [mdMenuTriggerFor]="appMenu" fxShow.xs fxShow.sm fxHide.gt-sm>
                 <span class="sr-only" [mdMenuTriggerFor]="appMenu">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">Paramétrage <b>Brique Service</b></a>
-            <md-menu #appMenu="mdMenu" class="visible-sm visible-xs">
+            <md-menu #appMenu="mdMenu" fxShow.xs fxShow.sm fxHide.gt-sm>
                 <app-togglemenu></app-togglemenu>
             </md-menu>
         </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
+        <div class="collapse navbar-collapse" fxHide.xs fxHide.sm>
+            <ul class="nav navbar-nav navbar-right" fxHide.xs fxHide.sm>
                 <li>
                     <a href="index.html">
                         <i class="material-icons">home</i>
-                        <p class="hidden-lg hidden-md">Accueil</p>
+                        <p fxHide.xs fxHide.sm>Accueil</p>
                     </a>
                 </li>
                 <li>
                     <a href="#" id="btn_print">
                         <i class="material-icons">print</i>
-                        <p class="hidden-lg hidden-md">Imprimer</p>
+                        <p fxHide.xs fxHide.sm>Imprimer</p>
                     </a>
                 </li>
                 <li>
