@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
 import { Navigation } from "../../services/navigation.service";
 
 /**
- * Composant Accueil
+ * Composant Accueil 
  *
  * @export
  * @class HomeComponent
