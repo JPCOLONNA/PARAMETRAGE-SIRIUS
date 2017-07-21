@@ -1,0 +1,38 @@
+{
+    "parametrage": [{
+            "name": "Parametrage Brique",
+            "id": "parametrage-brique",
+            "class": "no-click",
+            "icon": "",
+            "url": ""
+        },
+        {
+            "name": "Plan",
+            "id": "parametrage-plan",
+            "class": "",
+            "icon": "",
+            "url": "/parametrage-plan"
+        },
+        {
+            "name": "éligibilité",
+            "id": "parametrage-eligibilite",
+            "class": "",
+            "icon": "",
+            "url": "/parametrage-eligibilite"
+        },
+        {
+            "name": "pièce",
+            "id": "parametrage-piece",
+            "class": "",
+            "icon": "",
+            "url": "/parametrage-piece"
+        },
+        {
+            "name": "Type famille",
+            "id": "parametrage-type-famille",
+            "class": "",
+            "icon": "",
+            "url": "/parametrage-type-famille"
+        }
+    ]
+}

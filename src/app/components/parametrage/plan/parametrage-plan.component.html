@@ -1,0 +1,94 @@
+<md-card style="margin-right:10px;">
+    <md-card-header data-background-color="purple">
+
+        <md-card-title>Plan paramétrage</md-card-title>
+
+    </md-card-header>
+    <md-card-content>
+        <button md-button (click)="onAjoutPlan()">Ajouter</button>
+        <!--<a md-raised-button routerLink="parametrage-plan-ajout">Ajouter</a>-->
+        <md-table #table [dataSource]="dataSource" id="liste_parametrage_plan" mdSort>
+            <!-- ID -->
+            <ng-container cdkColumnDef="planId">
+                <md-header-cell *cdkHeaderCellDef md-sort-header> ID </md-header-cell>
+                <md-cell *cdkCellDef="let row"> {{row.planId}} </md-cell>
+            </ng-container>
+
+            <!-- Type Plan -->
+            <ng-container cdkColumnDef="typePlan">
+                <md-header-cell *cdkHeaderCellDef> Type plan </md-header-cell>
+                <md-cell *cdkCellDef="let row"> {{row.typePlan}} </md-cell>
+            </ng-container>
+
+            <!-- Description -->
+            <ng-container cdkColumnDef="description">
+                <md-header-cell *cdkHeaderCellDef> Description </md-header-cell>
+                <md-cell *cdkCellDef="let row"> {{row.description}} </md-cell>
+            </ng-container>
+
+            <!-- Contrat -->
+            <ng-container cdkColumnDef="contrat">
+                <md-header-cell *cdkHeaderCellDef> Contrat </md-header-cell>
+                <md-cell *cdkCellDef="let row"> {{row.contrat}} </md-cell>
+            </ng-container>
+
+            <!-- Type contrat -->
+            <ng-container cdkColumnDef="typeContrat">
+                <md-header-cell *cdkHeaderCellDef> typeContrat </md-header-cell>
+                <md-cell *cdkCellDef="let row"> {{row.typeContrat}} </md-cell>
+            </ng-container>
+
+            <!-- Collège-->
+            <ng-container cdkColumnDef="college">
+                <md-header-cell *cdkHeaderCellDef> Collège </md-header-cell>
+                <md-cell *cdkCellDef="let row"> {{row.college}} </md-cell>
+            </ng-container>
+
+            <!-- Régime-->
+            <ng-container cdkColumnDef="regime">
+                <md-header-cell *cdkHeaderCellDef> Régime </md-header-cell>
+                <md-cell *cdkCellDef="let row"> {{row.regime}} </md-cell>
+            </ng-container>
+
+            <!-- Type cotisation-->
+            <ng-container cdkColumnDef="typeCotisation">
+                <md-header-cell *cdkHeaderCellDef> Type cotisation </md-header-cell>
+                <md-cell *cdkCellDef="let row"> {{row.typeCotisation}} </md-cell>
+            </ng-container>
+
+            <!-- Actions-->
+            <ng-container cdkColumnDef="action">
+                <md-header-cell *cdkHeaderCellDef> Action </md-header-cell>
+                <md-cell *cdkCellDef="let row">
+                    <a href="parametrage-plan-fiche/dupliquer/{{row.planId}}" mdTooltip="Dupliquer" [mdTooltipPosition]="position" md-icon-button><i class="material-icons">content_copy</i></a>
+                    <a href="parametrage-plan-fiche/consulter/{{row.planId}}" mdTooltip="Consulter" [mdTooltipPosition]="position" md-icon-button><i class="material-icons">search</i></a>
+                    <a href="parametrage-plan-fiche/modifier/{{row.planId}}" mdTooltip="Modifier" [mdTooltipPosition]="position" md-icon-button><i class="material-icons">edit</i></a>
+                    <a href="parametrage-plan-fiche/supprimer/{{row.planId}}" mdTooltip="Supprimer" [mdTooltipPosition]="position" md-icon-button><i class="material-icons">clear</i></a>
+                </md-cell>
+            </ng-container>
+
+            <!--<a href="#" id="modify-cnp" rel="tooltip" title="Dupliquer" class="btn btn-primary btn-simple btn-xs" data-original-title="Dupliquer">
+
+                <div class="ripple-container"></div>
+            </a>
+            <a href="param_plan.html" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs" data-original-title="Consulter">
+                <i class="material-icons">search</i>
+                <div class="ripple-container"></div>
+            </a>
+            <a href="param_plan.html" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs" data-original-title="Modifier">
+                <i class="material-icons">edit</i>
+                <div class="ripple-container"></div>
+            </a>
+            <a href="param_plan.html" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs" data-original-title="Supprimer">
+                <i class="material-icons">clear</i>
+                <div class="ripple-container"></div>
+            </a>-->
+            <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
+            <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
+
+        </md-table>
+
+        <md-paginator #paginator [length]="dataSource._parametragePlanDatabase.data.length" [pageIndex]="0" [pageSize]="25" [pageSizeOptions]="[5, 10, 25, 100]">
+        </md-paginator>
+    </md-card-content>
+</md-card>

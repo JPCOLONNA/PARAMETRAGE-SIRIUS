@@ -1,0 +1,13 @@
+/** Variables liées à l'application */
+
+$color-text: #333333; //=> Gris charte graphique powerpoint
+$font-size-icon-large:50px;
+
+/** Variables liées à bootstrap et matérial */
+
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+$fa-font-path:'~font-awesome/fonts';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "material-dashboard";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "application";

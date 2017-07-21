@@ -1,0 +1,49 @@
+<div fxLayout="row" fxLayoutGap="20px">
+    <md-card fxFlex="75%">
+        <md-card-header data-background-color="purple">
+            <md-card-title>Plan paramétrage</md-card-title>
+        </md-card-header>
+        <md-card-content>
+            <button md-button (click)="onListPlan()"><i class="material-icons">reply</i> Retour</button>
+            <form (ngSubmit)="onsubmit()" [formGroup]="parametragePlanForm">
+                <div fxLayout="row" fxLayoutGap="20px">
+                    <!--1ère colonne -->
+                    <div fxLayout="column" fxFlex="50%">
+                        <md-input-container>
+                            <input mdInput type="text" placeholder="Plan Id" formGroupName="planId">
+                        </md-input-container>
+                        <md-input-container>
+                            <input mdInput type="text" placeholder="Type Plan" formGroupName="typePlan">
+                        </md-input-container>
+                        <md-input-container>
+                            <textarea mdInput placeholder="Description" formGroupName="description"></textarea>
+                        </md-input-container>
+                    </div>
+                    <!--2ème colonne -->
+                    <div fxLayout="column" fxFlex="50%">
+                        <md-input-container>
+                            <input mdInput type="text" placeholder="Contrat" formGroupName="contrat">
+                        </md-input-container>
+                        <md-input-container>
+                            <input mdInput type="text" placeholder="Collège" formGroupName="college">
+                        </md-input-container>
+                        <md-input-container>
+                            <input mdInput type="text" placeholder="Régime" formGroupName="regime">
+                        </md-input-container>
+                        <md-select placeholder="Type cotisation" name="typeCotisation" formGroupName="typeCotisation">
+                            <md-option value="structure">Structure</md-option>
+                            <md-option value="trancheage">Tranche d'age</md-option>
+                        </md-select>
+                    </div>
+                </div>
+                <button md-button (click)="parametragePlanForm.reset()">Annuler</button>
+                <button md-button type="submit" [disabled]="!parametragePlanForm.valid" data-background-color="purple">Valider</button>
+            </form>
+        </md-card-content>
+    </md-card>
+    <md-card fxFlex="25%">
+        <md-card-content>
+            Desciption de l'écran
+        </md-card-content>
+    </md-card>
+</div>

@@ -1,0 +1,35 @@
+#liste_parametrage_plan {
+    margin-top: 10px;
+}
+
+.navbar.navbar-green {
+    background-color: $green-color;
+    box-shadow: none;
+    border-bottom: 0;
+    color: $white-color !important;
+}
+
+.sidebar {
+    background-color: #fff;
+}
+
+
+/*.sidebar-background {
+    background-image: url('/assets/images/sidebar.jpg');
+}*/
+
+i.material-icons {
+    vertical-align: middle !important;
+}
+
+[md-button] {
+    color: #fff !important;
+}
+
+.mat-focused .mat-input-placeholder {
+    color: $purple-color !important;
+}
+
+.mat-card-title {
+    font-weight: 100 !important;
+}

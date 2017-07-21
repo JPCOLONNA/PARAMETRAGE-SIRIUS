@@ -1,0 +1,20 @@
+<div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+    <div class="logo">
+        <a href="index.html" class="simple-text">
+            <b>SIRIUS</b> <small>WEB</small>
+        </a>
+    </div>
+    <div style="position:relative;z-index:4;">
+        <ul class="nav" id="navsidebar">
+            <li *ngFor="let item of items" [ngClass]="{active: navigation.getSelectedId()==='li'+item.id}" dropdown (onToggle)="toggled($event)" (click)="navigation.setSelectedId('li'+item.id)" id="li{{item.id}}">
+                <a *ngIf="item.url" routerLink="{{ item.url }}" id="{{ item.id }}"><i *ngIf="item.icon" class="material-icons">{{ item.icon }}</i><span>{{ item.name | uppercase }}</span></a>
+                <a *ngIf="!item.url" id="{{ item.id }}" dropdownToggle><i *ngIf="item.icon" class="material-icons">{{ item.icon }}</i><span>{{ item.name | uppercase }}</span></a>
+                <ul *ngIf="item.subItems" class="dropdown-menu">
+                    <li *ngFor="let subItem of item.subItems">
+                        <a routerLink="{{ subItem.url }}" class="dropdown-item"><i *ngIf="item.icon" class="material-icons">{{ item.icon }}</i><span>{{ item.name | uppercase }}</span></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
