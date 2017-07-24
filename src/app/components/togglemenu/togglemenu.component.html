@@ -1,2 +1,3 @@
-<button md-menu-item> Settings </button>
-<button md-menu-item> Help </button>
+<button md-menu-item *ngFor="let item of items" id="{{ item.id }}" (click)="navigation.setSelectedId('li'+item.id)" routerLink="{{ item.url }}" [ngClass]="{'material-icons':item.icon}">
+    {{ item.name | uppercase }}
+</button>

@@ -11,7 +11,7 @@ import { BsDropdownModule } from "ngx-bootstrap";
 import { CollapseModule } from "ngx-bootstrap";
 
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { MdSidenavModule, MdCardModule, MdTableModule, MdPaginatorModule,MdButtonModule, MdInputModule, MdMenuModule } from '@angular/material';
+import { MdSidenavModule, MdCardModule, MdTableModule, MdPaginatorModule,MdButtonModule, MdInputModule, MdMenuModule, MdChipsModule } from '@angular/material';
 import { CdkTableModule } from '@angular/cdk';
 
 import { ParametrageModule } from './modules/parametrage.module';
@@ -90,7 +90,8 @@ import { SettingsFactory } from "./factories/settings.factory";
     CdkTableModule,
     MdButtonModule,
     MdInputModule,
-    MdMenuModule
+    MdMenuModule,
+    MdChipsModule
   ],
   providers: [
     BaseService,

@@ -1,31 +1,43 @@
 {
     "parametrage": [{
-            "name": "Parametrage Brique",
-            "id": "parametrage-brique",
-            "class": "no-click",
-            "icon": "",
-            "url": ""
-        },
-        {
-            "name": "Plan",
+            "name": "Tables de paramètres",
             "id": "parametrage-plan",
             "class": "",
             "icon": "",
             "url": "/parametrage-plan"
         },
         {
-            "name": "éligibilité",
-            "id": "parametrage-eligibilite",
-            "class": "",
+            "name": "Contrats",
+            "id": "Parametrage-contrats",
+            "class": "no-click",
             "icon": "",
-            "url": "/parametrage-eligibilite"
+            "url": ""
+        }, {
+            "name": "Produits",
+            "id": "Parametrage-produits",
+            "class": "no-click",
+            "icon": "",
+            "url": ""
+        }, {
+            "name": "Garanties",
+            "id": "Parametrage-garanties",
+            "class": "no-click",
+            "icon": "",
+            "url": ""
         },
         {
-            "name": "pièce",
-            "id": "parametrage-piece",
+            "name": "Paramétrage web",
+            "id": "parametrage-web",
             "class": "",
             "icon": "",
-            "url": "/parametrage-piece"
+            "url": "/parametrage-web"
+        },
+        {
+            "name": "Paramétrage GED",
+            "id": "parametrage-ged",
+            "class": "",
+            "icon": "",
+            "url": "/parametrage-ged"
         },
         {
             "name": "Type famille",
